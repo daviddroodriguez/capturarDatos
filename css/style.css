@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*root se utiliza para crear variables valores repetitivos en el sitio web como colores, tamaños
+margenes,etc*/
+:root{
+    --primary-color: #a579df;
+    --secondary-color: #6fc6e4;
+}
+
+.fila{
+    display: flex;
+    width: 1200px;
+
+    margin: 50px auto;
+    border: 2px solid var(--primary-color) ;
+}
+
+.fila .contBotones{
+    width: 50%;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 30px 20px;
+
+}
+
+.contBotones h2{
+    color:beige;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contBotones button{
+    padding: 8px 20px;
+    background: var(--secondary-color);
+    color: beige;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    margin: 12px;
+}
+
+.fila .contFigura{
+    width: 50%;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.contFigura h2{
+    font-size: 40px;
+    color: var(--secondary-color)
+}
+
+.contFigura #figura{
+    width: 180px;
+    height: 180px;
+    background: var(--secondary-color);
+    margin: 40px auto;
+    transition: 1s;
+}
+#figura.circulo{
+    border-radius: 50%;
+    transform: rotate(-360deg);
+}
+
+.contFigura #figura{
+    width: 180px;
+    height: 180px;
+    background: var(--secondary-color);
+    margin: 40px auto;
+    transition: 1s;
+}
+
+#figura.rombo{
+    transform: rotate(135deg);
+}
+
+/*transform tiene diferentes valores de propiedad como 
+    rotate:girar, 
+    scale:aumentar y disminuir, 
+    translate:mover en el eje x y eje y 
+    skew: distorcionar*/
+
+#figura.rectanguloH{
+    width: 300px;
+    height: 150px; 
+}
+
+#figura.rectanguloV{
+    width: 150px;
+    height: 300px; 
+}
+
+#figura.arriba{
+    transform: translateY(-40%);
+}
+#figura.abajo{
+    transform: translateY(40%);
+}
+#figura.izquierda{
+    transform: translateX(-60%);
+}
+#figura.derecha{
+    transform: translateX(60%);
+}
+#figura.diagonal{
+    transform: translate(-110px, -110px);
+}
+#figura.triangulo{
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid rgb(109, 181, 223);
+    border-left: 100px solid transparent;
+    background: transparent;
+    }
+#figura.imagen{
+    background-image: url(../img/bebe.gif);
+    padding: 110px;
+    height: 5px;
+}
+#figura.huevo {
+    width: 126px;
+    height: 180px;
+    background-color: var(--secondary-color);
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+#figura.pacman {
+    width:0;
+    height:0;
+    border-right: 50px solid white;
+    border-top: 50px solid var(--secondary-color);
+    border-left: 50px solid var(--secondary-color);
+    border-bottom: 50px solid var(--secondary-color);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+.fila{
+    display: flex;
+    width: 1200px;
+    
+    margin: 50px auto;
+    border: 2px solid var(--primary-color) ;
+}
+
+.fila .contForm{
+    width: 50%;
+    background: #7a7e7c;
+    color: black;
+    text-align: center;
+    padding: 40px;
+}
+.fila .contForm h2{
+    font-size: 30px;
+}
+.fila .contForm p{
+    font-size: 15px;
+}
+.contForm form .formGroup{
+    padding: 10px 30px;
+    text-align: left;
+
+}
+form .formGroup label{
+    display: block;
+    font-size: 20px;
+}
+form .formGroup input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form .formGroup select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form .formGroup textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form button{
+    background: #000000;
+    font-size: 20px;
+    padding: 12px 40px;
+    color: #ffffff;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+form button:hover{
+    padding: 12px 60px;
+}
+form{
+    margin-top: 40px;
+}
+.fila .contAvatar{
+    text-align: center;
+    padding: 40px;
+    background: #eaebea;
+    width: 50%;
+}
+.fila .contAvatar img{
+    width: 150px;
+}
+.fila .contAvatar h3{
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.fila .contAvatar p{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#contAvatar.azul{
+    background: #025be2;
+}
+#contAvatar.rojo{
+    background: #f00808;
+}
+#contAvatar.verde{
+    background: #04f104;
+}
+#contAvatar.rosado{
+    background: #f00aa3;
+}
+#contAvatar.morado{
+    background: #7d31e0;
+}
+
+.btn-nav{
+    position: absolute;
+    bottom: 100%;
+    right: 120px;
+    background:#000000;
+    color: black;
+    padding: 12px 40px;
+    text-decoration: none;
+
+}
